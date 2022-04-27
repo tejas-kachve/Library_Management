@@ -1,0 +1,66 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>create Book</h1>
+
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="first">Book Name</label>
+          <input type="text" name="book_name" class="form-control" placeholder="" id="first">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="last">Author Name</label>
+          <input type="text" name="author_name" class="form-control" placeholder="" id="last">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="company">Price</label>
+          <input type="text" name="price" class="form-control" placeholder="" id="company">
+        </div>
+
+
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="phone">Description</label>
+            <textarea name="description" class="form-control"></textarea>
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+    <!--  row   -->
+
+
+
+    <!--  row   -->
+
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+{% endblock %}
